@@ -1,16 +1,14 @@
 """Support for KNX/IP climate devices."""
 import voluptuous as vol
-import homeassistant.helpers.config_validation as cv
-from homeassistant.components.climate import (
-    PLATFORM_SCHEMA, SUPPORT_ON_OFF, SUPPORT_OPERATION_MODE,
-    SUPPORT_TARGET_TEMPERATURE, STATE_HEAT,
-    STATE_IDLE, STATE_MANUAL, STATE_DRY,
-    STATE_FAN_ONLY, STATE_ECO, ClimateDevice)
-from homeassistant.const import (
-    ATTR_TEMPERATURE, CONF_NAME, TEMP_CELSIUS)
-from homeassistant.core import callback
 
-from homeassistant.components.knx import DATA_KNX, ATTR_DISCOVER_DEVICES
+from homeassistant.components.climate import (
+    PLATFORM_SCHEMA, STATE_DRY, STATE_ECO, STATE_FAN_ONLY, STATE_HEAT,
+    STATE_IDLE, STATE_MANUAL, SUPPORT_ON_OFF, SUPPORT_OPERATION_MODE,
+    SUPPORT_TARGET_TEMPERATURE, ClimateDevice)
+from homeassistant.components.knx import ATTR_DISCOVER_DEVICES, DATA_KNX
+from homeassistant.const import ATTR_TEMPERATURE, CONF_NAME, TEMP_CELSIUS
+from homeassistant.core import callback
+import homeassistant.helpers.config_validation as cv
 
 CONF_SETPOINT_SHIFT_ADDRESS = 'setpoint_shift_address'
 CONF_SETPOINT_SHIFT_STATE_ADDRESS = 'setpoint_shift_state_address'
