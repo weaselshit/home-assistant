@@ -333,6 +333,7 @@ ENERGY_WATT_HOUR = 'Wh'
 # Temperature units
 TEMP_CELSIUS = '°C'
 TEMP_FAHRENHEIT = '°F'
+TEMP_KELVINS = 'K'
 
 # Length units
 LENGTH_CENTIMETERS = 'cm'  # type: str
