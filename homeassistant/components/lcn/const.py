@@ -3,7 +3,7 @@
 from itertools import product
 import re
 
-from homeassistant.const import TEMP_CELSIUS, TEMP_FAHRENHEIT
+from homeassistant.const import TEMP_CELSIUS, TEMP_FAHRENHEIT, TEMP_KELVINS
 
 DOMAIN = 'lcn'
 DATA_LCN = 'lcn'
@@ -60,7 +60,7 @@ S0_INPUTS = ['S0INPUT1', 'S0INPUT2', 'S0INPUT3', 'S0INPUT4']
 
 VAR_UNITS = ['', 'LCN', 'NATIVE',
              TEMP_CELSIUS,
-             '°K',
+             TEMP_KELVINS,
              TEMP_FAHRENHEIT,
              'LUX_T', 'LX_T',
              'LUX_I', 'LUX', 'LX',
